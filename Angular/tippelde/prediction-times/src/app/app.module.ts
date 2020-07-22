@@ -9,6 +9,7 @@ import { DraftComponent } from './draft/draft.component';
 import { InstatComponent } from './instat/instat.component';
 import { PtkupaComponent } from './ptkupa/ptkupa.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PtheaderComponent } from './ptheader/ptheader.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProfileComponent } from './profile/profile.component';
     DraftComponent,
     InstatComponent,
     PtkupaComponent,
-    ProfileComponent
+    ProfileComponent,
+    PtheaderComponent
   ],
   imports: [
     BrowserModule

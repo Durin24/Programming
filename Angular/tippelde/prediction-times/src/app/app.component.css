@@ -1,0 +1,228 @@
+body {
+    background-color: #efa352;
+    margin: 0 8% auto;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  a {
+    color: #efa352;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .container-fluid {
+    padding: 0;
+  }
+  
+  /* NavBar Items */
+  
+  .ball {
+    width: 100%
+  }
+  
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar-brand {
+    color: #c53922;
+    display: inline-block;
+    font-family: 'Sail', cursive;
+    font-size: 2.5rem;
+    margin: 0 0 20px;
+    text-align: left;
+  }
+  
+  .navbar-brand:hover {
+    color: #6f0000;
+  }
+  
+  .navbar-brand img {
+    margin: 0;
+    width: 8%;
+  }
+  
+  .navbar-brand span {
+    margin: auto auto 0;
+    padding: 0;
+  }
+  
+  .navbar-vertical-line {
+    border-left: 2.5px solid #c53922;
+    height: 70px;
+    display: inline-block;
+    margin: auto 20px;
+  }
+  
+  .navcontainer {
+    background-color: #c53922;
+    margin: 0 0 20px;
+  }
+  
+  .navcontainer a {
+    color: #efa352;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  
+  .nav-item {
+  background-color: #c53922;
+  box-shadow: 3px 3px 10px 1px #222831;
+  text-align: center;
+  }
+  
+  .nav-item a:hover {
+    color: #6f0000;
+  }
+  
+  .nav-item-shadow {
+    background-color: #efa352;
+    padding-right: 10px;
+  }
+  
+  
+  /* Multiple Rows */
+  
+  .col- {
+    color: #efa352;
+    font-size: 1.5rem;
+    padding-left: 0;
+  }
+  
+  .header-text {
+    padding-left: 0;
+  }
+  
+  .row {
+    margin: auto 0;
+  }
+  
+  /* Row1 */
+  
+  .elso-csempesor {
+    margin-top: 10px;
+  }
+  
+  .to-have-margin-1 {
+    background-color: #c53922;
+    box-shadow: 5px 5px 10px 1px #222831;
+    color: #efa352;
+    font-size: 1.5rem;
+    height: 30rem;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+    /* Tile1 */
+  
+    #carouseltile1 {
+      width: 100%;
+    }
+  
+    .carousel-item-header {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .rowtile11 {
+      height: 15%;
+    }
+  
+    .rowtile12 {
+      height: 85%;
+    }
+  
+    /* Tile2 */
+  
+  
+    .row-tabella1 {
+    height: 50%;
+    }
+  
+    .row-tabella2 {
+      height: 50%;
+    }
+  
+    .teljes-tabella-text {
+      text-align: right;
+    }
+  
+    .teljes-tabella:hover {
+      color: #6f0000;
+    }
+  
+  
+    /* Tile3 */
+  
+    .row-kupa1 {
+      height: 50%;
+    }
+  
+    .row-kupa2 {
+      height: 50%;
+    }
+  
+    .teljes-kupa-text {
+      text-align: right;
+    }
+  
+    .teljes-kupa:hover {
+      color: #6f0000;
+    }
+  
+  /* Row2 */
+  
+  #carouseltile4 {
+    width: 100%;
+  }
+  
+  .aktiv-merkozesek {
+    margin: 10px auto;
+  }
+  
+  .to-have-margin-2 {
+    background-color: #c53922;
+    box-shadow: 5px 5px 10px 1px #222831;
+    color: #efa352;
+    font-size: 1.5rem;
+    height: 15rem;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  .rowtile41 {
+    height: 25%;
+  }
+  
+  .rowtile42 {
+    height: 75%;
+  }
+  
+  /* Row3 */
+  
+  
+  
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  
+  .to-have-margin-1 {
+    height: 15rem;
+  }
+  
+  .to-have-margin-2 {
+    height: 15rem;
+  }
+  
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .to-have-margin-1 {
+    height: 15rem;
+  }
+  
+  .to-have-margin-2 {
+    height: 15rem;
+  }
+  
+  }
+  
