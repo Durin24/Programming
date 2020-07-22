@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+/* cyrillic-ext */
+body {
+    background-color: #efa352;
+    margin: 0 8% auto;
+    font-family: 'Montserrat', sans-serif;
+  }
