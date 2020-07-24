@@ -1,0 +1,18 @@
+.container-fluid, html, body {
+    height: 68%;
+    flex-flow: column;
+    display: flex;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-12 {
+    padding: 0;
+}
+.row {
+    flex: 1;
+    margin-left: 0;
+}

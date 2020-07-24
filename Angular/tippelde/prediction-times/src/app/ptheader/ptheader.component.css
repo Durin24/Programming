@@ -1,0 +1,61 @@
+.container-fluid {
+    padding: 0;
+}
+.row {
+    margin-left: 0;
+}
+
+/* Prediction Times line */
+
+.navbar {
+    padding: 0;
+}
+
+.navbarNav {
+    margin-block-start: 0;
+}
+
+.navbar-brand img {
+    margin: 0;
+    width: 8%;
+  }
+
+  .navbar-vertical-line {
+    border-left: 2.5px solid #c53922;
+    height: 70px;
+    display: inline-block;
+    margin: auto 20px;
+  }
+
+  .navbar-brand span {
+    margin: auto auto 0;
+    padding: 0;
+    font-weight: bold;
+    color: #c53922;
+    display: inline-block;
+    font-family: 'Sail', cursive;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  
+
+  .headerrow {
+      margin: auto 0 50px auto;
+  }
+
+/*   Navbar line */
+
+.navitemdiv {
+    margin: auto 10px;
+    background-color: red;
+    box-shadow: 3px 3px 10px 1px #222831;
+}
+
+.navitemdivleft {
+    margin-left: 0;
+}
+
+nav {
+    margin: auto auto 40px;
+}

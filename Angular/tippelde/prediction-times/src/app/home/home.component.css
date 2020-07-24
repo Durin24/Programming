@@ -1,0 +1,63 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: red;
+    margin: 0 5px 10px auto;
+    padding: auto auto 0;
+}
+
+.cboutside {
+    padding: 0
+}
+
+.row {
+    margin: 0 0px 10px 0px;
+}
+
+.col {
+    margin: auto 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    display: flex;
+}
+
+.card-buttons {
+    text-align: right;
+    margin: 0;
+}
+.btn {
+    padding: auto 3% 3%;
+    vertical-align: text-bottom;
+}
+
+.legfrissebb {
+width: 50%;
+}
+
+
+.aktiv-merkozesek {
+flex-grow: 2;
+width: 60%;
+}
+
+.tippelde-kupa {
+    flex-grow: 1;
+}
+
+.row1 {
+    flex: 1;
+}
+
+.row2 {
+    flex: 1;
+}
+
+.wrapper, html, body {
+    height: 100%;
+    flex-flow: column;
+    display: flex;
+}

@@ -2,6 +2,11 @@
 /* cyrillic-ext */
 body {
     background-color: #efa352;
-    margin: 0 8% auto;
+    margin: 0 6% auto;
     font-family: 'Montserrat', sans-serif;
+    height: 100%;
+  }
+
+  html {
+    height: 100%;
   }
