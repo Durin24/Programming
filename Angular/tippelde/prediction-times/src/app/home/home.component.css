@@ -5,13 +5,27 @@
 }
 
 .card {
-    background-color: red;
-    margin: 0 5px 10px auto;
+    margin: 0 5px 0 auto;
     padding: auto auto 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.flexdivs {
+    max-height: 255px;
+}
+
+.card-img {
+ max-height: 100%;
+ max-width: 100%;
+ width: auto;
+ height: auto;
+ object-fit: fill;
+ height: 100%;
 }
 
 .cboutside {
-    padding: 0
+    padding: 0;
 }
 
 .row {
@@ -36,16 +50,35 @@
 
 .legfrissebb {
 width: 50%;
+max-width: 60%;
+height: 100%;
+}
+
+.tabella {
+    max-width: 40%;
+    height: 100%;
 }
 
 
 .aktiv-merkozesek {
 flex-grow: 2;
-width: 60%;
+width: 50%;
+max-width: 60%;
+height: 100%;
+}
+
+.amimg {
+
 }
 
 .tippelde-kupa {
     flex-grow: 1;
+    max-width: 40%;
+    height: 100%;
+}
+
+.tkimg {
+
 }
 
 .row1 {
@@ -54,6 +87,7 @@ width: 60%;
 
 .row2 {
     flex: 1;
+    
 }
 
 .wrapper, html, body {
