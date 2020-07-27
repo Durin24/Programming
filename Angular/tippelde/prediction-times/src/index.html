@@ -59,7 +59,7 @@
     }); */
     firebase.auth().signInWithEmailAndPassword("petr.guber@gmail.com", "admin123");
     var database = firebase.database();
-    database.ref("Users").set({ Valami: "Valami" });
+/*     database.ref("Users").set({ Valami: "Valami" }); */
     var fSuccess = function (snapshot) {
       console.log(snapshot.val());
     };
