@@ -26,6 +26,7 @@ import { LegfrissebbTortenesekComponent } from './home/legfrissebb-tortenesek/le
 import { HomeTabellaComponent } from './home/home-tabella/home-tabella.component';
 import { AktivMerkozesekComponent } from './home/aktiv-merkozesek/aktiv-merkozesek.component';
 import { HomeTippeldeKupaComponent } from './home/home-tippelde-kupa/home-tippelde-kupa.component';
+import { AuthComponent } from './auth/auth.component';
 
 const config = {
   apiKey: 'AIzaSyAUfhqXj3eKVTjfx6JaR_BFi7kE1LeBo60',
@@ -54,7 +55,8 @@ const config = {
     LegfrissebbTortenesekComponent,
     HomeTabellaComponent,
     AktivMerkozesekComponent,
-    HomeTippeldeKupaComponent
+    HomeTippeldeKupaComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, NgbModule, AngularFireModule.initializeApp(environment.firebase),
