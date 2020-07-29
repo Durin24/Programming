@@ -50,9 +50,14 @@
                     <a class="nav-link" routerLink="tippelde-kupa">Tippelde Kupa</a>
                   </li>
                 </div>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+                <ul class="nav navbar-right">
+                  <div class="navitemdiv" (click)="onLogout()">
+                    <li class="nav-item">
+                      <a class="nav-link">Kijelentkezés</a>
+                    </li>
+                  </div>
+                </ul>
+                
               </ul>
             </div>
           </nav>

@@ -28,6 +28,8 @@ import { AktivMerkozesekComponent } from './home/aktiv-merkozesek/aktiv-merkozes
 import { HomeTippeldeKupaComponent } from './home/home-tippelde-kupa/home-tippelde-kupa.component';
 import { AuthComponent } from './auth/auth.component';
 
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+
 const config = {
   apiKey: 'AIzaSyAUfhqXj3eKVTjfx6JaR_BFi7kE1LeBo60',
   authDomain: 'prediction-times.firebaseapp.com',
@@ -56,7 +58,8 @@ const config = {
     HomeTabellaComponent,
     AktivMerkozesekComponent,
     HomeTippeldeKupaComponent,
-    AuthComponent
+    AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, NgbModule, AngularFireModule.initializeApp(environment.firebase),

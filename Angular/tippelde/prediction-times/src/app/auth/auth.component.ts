@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Observable, Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+
+import { AuthService, AuthResponseData } from './auth.service';
+
 
 @Component({
   selector: 'app-auth',
@@ -9,8 +14,10 @@ import { NgForm } from '@angular/forms';
 export class AuthComponent implements OnInit {
 
   isLoginMode = true;
+  isLoading = false;
+  error: string = null;
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,7 +27,30 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log(form);
+    if (!form.valid) {
+      return;
+  }
 
+    this.isLoading = true;
+
+    if (this.isLoginMode) {
+      this.authService.logIn(form.value.email, form.value.password).subscribe(resData => {
+        console.log(resData);
+      }, error => {
+        console.log(error);
+      })
+      this.router.navigate(['/home']);;
+  } else {
+      this.authService.signUp(form.value.email, form.value.password).subscribe(resData => {
+        console.log(resData);
+        this.isLoading = false;
+      }, error => {
+          console.log(error);
+          this.error = 'An error occurred!'
+          this.isLoading = false;
+        });
+  }
+
+    form.reset();
 }
 }

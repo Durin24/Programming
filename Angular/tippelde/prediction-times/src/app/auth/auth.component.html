@@ -1,8 +1,14 @@
-<form #authForm="ngForm" (ngSubmit)="onSubmit(ngForm)">
+<div *ngIf="error">
+    <p>{{ error }}</p>
+</div>
+<div *ngIf="isLoading">
+    <app-loading-spinner></app-loading-spinner>
+</div>
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
     <label for="email">Email</label>
     <input type="text" name="email" id="email" email ngModel required>
     <label for="password">Password</label>
-    <input type="text" name="email" id="email" password ngModel required>
+    <input type="password" name="password" id="password" password ngModel required>
     <button type="submit">{{ isLoginMode ? 'Login' : 'Sign Up' }}</button>
     <button class="btn btn-primary" (click)="onSwitchMode()" type="button">Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}</button>
 </form>
