@@ -50,6 +50,7 @@
     margin: auto 10px;
     /* background-image: url("C:\Users\ASURA-P\Documents\Udemy\ptimes\Programming\Angular\tippelde\prediction-times\src\assets\boxes/30for30.png"); */
     box-shadow: 3px 3px 10px 1px #222831;
+    cursor: pointer;
 }
 
 .navitemdivleft {
