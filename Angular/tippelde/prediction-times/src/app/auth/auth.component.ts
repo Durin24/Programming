@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable, Subscription } from 'rxjs';
 import { Router } from '@angular/router';
@@ -11,11 +11,12 @@ import { AuthService, AuthResponseData } from './auth.service';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent implements OnInit, OnDestroy {
 
   isLoginMode = true;
   isLoading = false;
   error: string = null;
+  authSubscription: Subscription;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -41,10 +42,9 @@ export class AuthComponent implements OnInit {
       authObs = this.authService.signUp(form.value.email, form.value.password);
   }
 
-    authObs.subscribe(resData => {
+    this.authSubscription = authObs.subscribe(resData => {
     console.log(resData);
     this.isLoading = false;
-    
     this.router.navigate(['/home']);
 }, errorMessage => {
     console.log(errorMessage);
@@ -53,4 +53,11 @@ export class AuthComponent implements OnInit {
 
     form.reset();
 }
+
+ngOnDestroy() {
+  if (this.authSubscription) {
+    this.authSubscription.unsubscribe();
+  } 
+}
+
 }

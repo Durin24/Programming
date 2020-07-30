@@ -1,7 +1,7 @@
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, take } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
 
@@ -17,7 +17,7 @@ boolean | UrlTree | Promise<boolean | UrlTree> | Observable<boolean | UrlTree> {
         if (isAuth) {
             return true;
         } else {
-            return this.router.createUrlTree(['/login']);
+            return this.router.createUrlTree(['/auth']);
         }
     }));
 }
