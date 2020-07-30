@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 import { AuthService } from '../auth/auth.service';
 
@@ -7,15 +9,26 @@ import { AuthService } from '../auth/auth.service';
   templateUrl: './ptheader.component.html',
   styleUrls: ['./ptheader.component.css']
 })
-export class PtheaderComponent implements OnInit {
+export class PtheaderComponent implements OnInit, OnDestroy {
 
-  constructor(private authService: AuthService) { }
+  isAuthenticated = false;
+  private userSub: Subscription;
 
-  ngOnInit(): void {
+  constructor(private authService: AuthService, private router: Router) { }
+
+  ngOnInit() {
+    this.userSub = this.authService.user.subscribe(user => {
+      this.isAuthenticated = !user ? false : true;
+    });
   }
 
   onLogout() {
     this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
+  ngOnDestroy() {
+    this.userSub.unsubscribe();
   }
 
 }

@@ -31,25 +31,25 @@ export class AuthComponent implements OnInit {
       return;
   }
 
+    let authObs: Observable<AuthResponseData>;
+
     this.isLoading = true;
 
     if (this.isLoginMode) {
-      this.authService.logIn(form.value.email, form.value.password).subscribe(resData => {
-        console.log(resData);
-      }, error => {
-        console.log(error);
-      })
-      this.router.navigate(['/home']);;
+      authObs = this.authService.logIn(form.value.email, form.value.password);
   } else {
-      this.authService.signUp(form.value.email, form.value.password).subscribe(resData => {
-        console.log(resData);
-        this.isLoading = false;
-      }, error => {
-          console.log(error);
-          this.error = 'An error occurred!'
-          this.isLoading = false;
-        });
+      authObs = this.authService.signUp(form.value.email, form.value.password);
   }
+
+    authObs.subscribe(resData => {
+    console.log(resData);
+    this.isLoading = false;
+    
+    this.router.navigate(['/home']);
+}, errorMessage => {
+    console.log(errorMessage);
+    this.isLoading = false;
+});
 
     form.reset();
 }
