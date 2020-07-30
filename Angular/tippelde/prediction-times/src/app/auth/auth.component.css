@@ -1,0 +1,81 @@
+h1 {
+    padding: 2% 0 0 0;
+    font-family: 'Sail', cursive;
+    font-size: 5vw;
+    vertical-align: middle;
+    margin: 0;
+}
+
+label {
+    padding-right: 2%;
+    font-size: 2rem;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-family: 'Sail', cursive;
+}
+
+.row {
+    padding: 0 6% 5% 6%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex-fill {
+    display: inline-block;
+}
+
+.form-control {
+    width: 60%;
+    margin: 2% 10% 2% 10%;
+    display: inline-block;
+}
+
+.logo {
+    margin: 0;
+    max-width: 15%;
+    height: auto;
+}
+
+.emailfield {
+    padding-bottom: 2%;
+}
+
+.formclass {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 55%;
+    padding: 2% 0;
+    text-align: center;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    font-weight: bold;
+    color: #fff;
+    border: 10px inset #fff;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.btn-outline-dark {
+    color: #fff;
+    border-color: #fff;
+    margin: 2% 3%
+}
+
+@media only screen and (min-width: 500px) and (max-width: 991px) {
+
+    .logo {
+        max-width: 100%;
+        width: 20%;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+    
+    }

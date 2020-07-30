@@ -1,11 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 /* cyrillic-ext */
 body {
-    background-color: #efa352;
     margin: 0 6% auto;
     font-family: 'Montserrat', sans-serif;
     height: 100%;
-    background-image: url('./assets/backround-image/stadium2.png');
+    background-image: url('./assets/background-image/blur10.png');
     background-position: center;
       display: block;
       -webkit-background-size: cover;

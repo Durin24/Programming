@@ -17,7 +17,7 @@ boolean | UrlTree | Promise<boolean | UrlTree> | Observable<boolean | UrlTree> {
         if (isAuth) {
             return true;
         } else {
-            return this.router.createUrlTree(['/auth']);
+            return this.router.createUrlTree(['/login']);
         }
     }));
 }
