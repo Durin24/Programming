@@ -13,6 +13,7 @@ export class PtheaderComponent implements OnInit, OnDestroy {
 
   isAuthenticated = false;
   private userSub: Subscription;
+  collapsed = true;
 
   constructor(private authService: AuthService, private router: Router) { }
 

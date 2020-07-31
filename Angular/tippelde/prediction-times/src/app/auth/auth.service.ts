@@ -30,10 +30,25 @@ signUp(email: string, password: string) {
     }));
 }
 
+autoLogin() {
+    const userData: {
+        email: string; id: string; token: string; _tokenExpirationDate: string;
+    } = JSON.parse(localStorage.getItem('userData'));
+    if (!userData) {
+        return;
+    }
+    const loadedUser = new User(userData.email, userData.id, userData.token, new Date(userData._tokenExpirationDate));
+    if (loadedUser._token) {
+        this.user.next(loadedUser);
+        const expirationDuration = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime();
+    }
+}
+
 private handleAuthentication(email: string, userId: string, token: string, expiresIn: number) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
     const user = new User(email, userId, token, expirationDate);
     this.user.next(user);
+    localStorage.setItem('userData', JSON.stringify(user));
 }
 
 logIn(email: string, password: string) {
